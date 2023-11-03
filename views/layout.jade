@@ -1,0 +1,33 @@
+
+
+
+html(lang="en")
+  head
+    title DALLIKAKTUS
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(rel='stylesheet',href='../public/css/materialize.min.css' type='text/css' media='screen,projection')
+    link(rel='stylesheet',href='../public/css/layout.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    block css
+  
+    script(type='text/javascript' src="../public/js/kütüphane/p5.min.js")
+    script(type='text/javascript' src="../public/js/kütüphane/p5.dom.min.js")
+    script(type='text/javascript' src="../public/js/kütüphane/tracking-min.js")
+    script(type='text/javascript' src="../public/js/kütüphane/jquery-3.2.1.js")
+    script(type='text/javascript' src="../public/js/kütüphane/socketio.js")
+    script(type='text/javascript' src="../public/js/kütüphane/materialize.min.js")
+    script(type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+  body
+   nav
+    mixin sayfalar(...linkler)
+     each link in linkler
+      li 
+       a.black-text.nav-link(href='#{link}')=link
+    .nav-wrapper
+     a.brand-logo.center(href='#') DALLI KAKTUS
+     a.sidenav-trigger(href='#' data-target='mobile-nav')
+       i.material-icons view_list
+   block body
+   script(type='text/javascript' src="/public/js/layout.js")
+   

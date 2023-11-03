@@ -1,0 +1,15 @@
+extends layout
+block css
+ link(rel='stylesheet', href='../public/css/client.css')
+block body 
+
+ div.container
+  div(class="input-field col s3")
+   select#gidilecek
+    option(value="bos" disabled selected)='gidilecek yeri seçin'
+    each variable in [{konum:'[0][1]',isim:'ev'},{konum:'[4][3]',isim:'kafe'},{konum:'[2][0]',isim:'eczane'},{konum:'[2][4]',isim:'market'}]
+     option(value=variable.konum) #{variable.isim}
+
+  button.mekanbtn.btn.red.white-text.waves-effect(onclick='reset()' id='git')='git'
+  script(type='text/javascript' src="/public/js/client.js")    
+  
